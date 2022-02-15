@@ -7,7 +7,6 @@ public class EmployTest {
     @BeforeEach
     public void beforeEach(){
         System.out.println("This happens before each test in this class");
-
     }
 
     @BeforeAll
