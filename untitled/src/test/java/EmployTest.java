@@ -47,7 +47,6 @@ public class EmployTest {
 
     }
 
-
     @Test
     public void returnSetFirstname(){
         testObject = new Employee("Peter");
