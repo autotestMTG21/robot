@@ -6,7 +6,6 @@ public class Employee {
     private double monthSalary;
 
     public Employee(){
-
     }
 
     public Employee(String name,int age, double monthSalary){
