@@ -16,8 +16,7 @@ public class Employee {
         ID = IDnumber;
     }
 
-
     public String getName() {
-
+        return this.name;
     }
 }
