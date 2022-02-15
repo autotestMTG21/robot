@@ -31,9 +31,13 @@ public class Employee {
         ID = IDnumber;
     }
 
-
-
-    public String getName() {
-        return this.firstname +" " +this.lastname;
+    public String getFirstName() {
+        return this.firstname ;
     }
+
+    public void setFirstname(String firstname){
+        this.firstname = firstname;
+    }
+
+
 }

@@ -40,14 +40,20 @@ public class EmployTest {
     }
 
     @Test
-    public void returnGetname(){
-        testObject = new Employee("Jonas","Eriksson");
+    public void returnGetFirstname(){
+        testObject = new Employee("Jonas");
 
-        Assertions.assertEquals("Jonas Eriksson",testObject.getName());
+        Assertions.assertEquals("Jonas",testObject.getFirstName());
 
     }
 
-    public void returnSetname(){
-        
+
+    @Test
+    public void returnSetFirstname(){
+        testObject = new Employee("Peter");
+        testObject.setFirstname("Peter");
+        String actual = testObject.getFirstName();
+
+        Assertions.assertEquals("Peter",actual );
     }
 }
