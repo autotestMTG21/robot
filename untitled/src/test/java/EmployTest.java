@@ -1,4 +1,5 @@
 import org.junit.jupiter.api.*;
+import org.springframework.test.util.ReflectionTestUtils;
 
 public class EmployTest {
 
@@ -25,7 +26,17 @@ public class EmployTest {
     }
 
     @Test
-    public void returnEmployeeName(){
-        testObject = new Employee();
+    public void returnEmployee(){
+        String firstname = "Lia";
+        String lastname = "Andersson";
+        int age = 56;
+        double monthSalary = 35000;
+        testObject = new Employee("Lia", "Andersson", 56,35000);
+
+        Assertions.assertEquals(firstname, ((String) ReflectionTestUtils.getField(testObject,"firstname")));
+        Assertions.assertEquals(lastname,((String) ReflectionTestUtils.getField(testObject,"lastname")));
+        Assertions.assertEquals(age,((Integer) ReflectionTestUtils.getField(testObject,"age")),0 );
+        Assertions.assertEquals(monthSalary,((Double) ReflectionTestUtils.getField(testObject,"monthSalary")));
+
     }
 }
