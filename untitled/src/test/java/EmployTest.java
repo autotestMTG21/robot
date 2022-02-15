@@ -46,4 +46,8 @@ public class EmployTest {
         Assertions.assertEquals("Jonas Eriksson",testObject.getName());
 
     }
+
+    public void returnSetname(){
+        
+    }
 }
