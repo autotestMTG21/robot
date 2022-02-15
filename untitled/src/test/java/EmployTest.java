@@ -1,7 +1,4 @@
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.*;
 
 public class EmployTest {
 
@@ -13,21 +10,23 @@ public class EmployTest {
 
     }
 
-    // @BeforeAll Happens once before tests
     @BeforeAll
     public static void beforeAll(){
         System.out.println("This happens before all tests in this class");
     }
 
-    //  @AfterEach Happens after each test
     @AfterEach
     public void afterEach(){
         System.out.println("This happens after each test in this class");
     }
 
-    // @AfterAll  Happens once after tests
     @AfterAll
     public static void afterAll(){
         System.out.println("This is the last thing that is run before the test class is finished");
+    }
+
+    @Test
+    public void returnEmployeeName(){
+        testObject = new Employee();
     }
 }
