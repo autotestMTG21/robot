@@ -1,5 +1,5 @@
-public class Employee {private String firstname;
-    private String lastname;
+public class Employee {
+    private String name;
     private int age;
     private int ID;
     static int IDnumber;
@@ -9,9 +9,8 @@ public class Employee {private String firstname;
 
     }
 
-    public Employee(String firstname,String lastname,int age, double monthSalary){
-        this.firstname = firstname;
-        this.lastname = lastname;
+    public Employee(String name,int age, double monthSalary){
+        this.name = name;
         this.age = age;
         this.monthSalary = monthSalary;
         IDnumber ++;
