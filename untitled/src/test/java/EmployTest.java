@@ -38,7 +38,12 @@ public class EmployTest {
     }
 
     @Test
-    public void returnGetFirstname(){
+    public void returnGetname(){
+        String name = "Ericsson,Jonas";
+        testObject = new Employee();
+
+        Assertions.assertEquals(name,testObject.getName());
+
 
 
     }
