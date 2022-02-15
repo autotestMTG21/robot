@@ -26,7 +26,7 @@ public class EmployTest {
     }
 
     @Test
-    public void returnEmployee(){
+    public void returnEmployeeConstr(){
         String firstname = "Lia";
         String lastname = "Andersson";
         int age = 56;
