@@ -27,22 +27,23 @@ public class EmployTest {
 
     @Test
     public void returnEmployeeConstr(){
-        String name = "Andersson,Lia";
+        String firstname = "Lia";
+        String lastname = "Andersson";
         int age = 56;
         double monthSalary = 35000;
-        testObject = new Employee("Andersson,Lia", 56,35000);
+        testObject = new Employee("Lia","Andersson", 56,35000);
 
-        Assertions.assertEquals(name, ((String) ReflectionTestUtils.getField(testObject,"name")));
+        Assertions.assertEquals(firstname, ((String) ReflectionTestUtils.getField(testObject,"firstname")));
+        Assertions.assertEquals(lastname, ((String) ReflectionTestUtils.getField(testObject,"lastname")));
         Assertions.assertEquals(age,((Integer) ReflectionTestUtils.getField(testObject,"age")),0 );
         Assertions.assertEquals(monthSalary,((Double) ReflectionTestUtils.getField(testObject,"monthSalary")));
     }
 
     @Test
     public void returnGetname(){
-        String name = "Ericsson,Jonas";
-        testObject = new Employee();
+        testObject = new Employee("Jonas","Eriksson");
 
-        Assertions.assertEquals(name,testObject.getName());
+        Assertions.assertEquals("Jonas Eriksson",testObject.getName());
 
     }
 }
