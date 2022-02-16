@@ -65,11 +65,14 @@ public class EmployTest {
         Assertions.assertEquals(expected,actual );
     }
 
-    /*@Test
-    public void adamVisar(){
-        int adamAge = 30;
-        testObject.compareAge(adamAge);
-    }*/
+    @Test
+    public void returnGetLastname(){
+        String expected = "Lundgren";
+        String actual = testObject2.getLastname();
+
+        Assertions.assertEquals(expected,actual);
+
+    }
 
 
 }
