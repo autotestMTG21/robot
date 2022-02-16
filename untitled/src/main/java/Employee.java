@@ -55,7 +55,7 @@ public class Employee {
         this.monthSalary = monthSalary;
     }
 
-    @Override
+    /*@Override
     public String toString() {
         return "Employee{" +
                 "firstname='" + firstname + '\'' +
@@ -64,7 +64,7 @@ public class Employee {
                 ", monthSalary=" + monthSalary +
                 ", ID=" + ID +
                 '}';
-    }
+    }*/
 
 
 }
