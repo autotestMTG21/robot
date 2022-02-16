@@ -61,6 +61,7 @@ public class EmployTest {
     public void returnSetFirstname(){
         String expected = "Sara";
         String actual = testObject2.getFirstName();
+        testObject2.setFirstname(expected);
 
         Assertions.assertEquals(expected,actual );
     }
@@ -71,6 +72,11 @@ public class EmployTest {
         String actual = testObject2.getLastname();
 
         Assertions.assertEquals(expected,actual);
+    }
+
+    @Test
+    public void returnSetLastname(){
+        String expected = "Lundgren";
 
     }
 
