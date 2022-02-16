@@ -44,6 +44,8 @@ public class EmployTest {
     public void returnGetId(){
         int expected = 1;
         int actual = testObject1.getId();
+
+        Assertions.assertEquals(expected,actual);
     }
 
     /*@Test
