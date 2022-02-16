@@ -3,10 +3,16 @@ import org.springframework.test.util.ReflectionTestUtils;
 
 public class EmployTest {
 
-    Employee testObject;
+    Employee testObject1;
+    Employee testObject2;
+    Employee testObject3;
 
     @BeforeEach
     public void beforeEach(){
+        testObject1 = new Employee("Ella","Noren",25,25000);
+        testObject2 = new Employee("Sara","Lundgren",35,30000);
+        testObject3 = new Employee("Petra","Eriksson",45,40000);
+
         System.out.println("This happens before each test in this class");
     }
 
@@ -27,21 +33,22 @@ public class EmployTest {
 
     @Test
     public void returnEmployeeConstr(){
-        String firstname = "Lia";
-        String lastname = "Andersson";
-        int age = 56;
-        double monthSalary = 35000;
-        testObject = new Employee("Lia","Andersson", 56,35000);
 
-        Assertions.assertEquals(firstname, ((String) ReflectionTestUtils.getField(testObject,"firstname")));
-        Assertions.assertEquals(lastname, ((String) ReflectionTestUtils.getField(testObject,"lastname")));
-        Assertions.assertEquals(age,((Integer) ReflectionTestUtils.getField(testObject,"age")),0 );
-        Assertions.assertEquals(monthSalary,((Double) ReflectionTestUtils.getField(testObject,"monthSalary")));
+        Assertions.assertEquals("Ella", ((String) ReflectionTestUtils.getField(testObject1,"firstname")));
+        Assertions.assertEquals("Noren", ((String) ReflectionTestUtils.getField(testObject1,"lastname")));
+        Assertions.assertEquals(25,((Integer) ReflectionTestUtils.getField(testObject1,"age")),0 );
+        Assertions.assertEquals(25000,((Double) ReflectionTestUtils.getField(testObject1,"monthSalary")));
     }
 
     @Test
+    public void returnGetId(){
+        int expected = 1;
+        int actual = testObject1.getId();
+    }
+
+    /*@Test
     public void returnGetFirstname(){
-        testObject = new Employee("Jonas");
+
 
         Assertions.assertEquals("Jonas",testObject.getFirstName());
 
@@ -55,4 +62,12 @@ public class EmployTest {
 
         Assertions.assertEquals("Peter",actual );
     }
+
+    @Test
+    public void adamVisar(){
+        int adamAge = 30;
+        testObject.compareAge(adamAge);
+    }*/
+
+
 }

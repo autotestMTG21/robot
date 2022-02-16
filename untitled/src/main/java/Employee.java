@@ -10,18 +10,6 @@ public class Employee {
 
     }
 
-    public Employee(String firstname){
-        this(firstname,null);
-    }
-
-    public Employee(String firstname,String lastname) {
-        this(firstname,lastname,0);
-    }
-
-    public Employee(String firstname,String lastname,int age){
-        this(firstname,lastname,age,0);
-    }
-
     public Employee(String firstname, String lastname, int age, double monthSalary){
         this.firstname = firstname;
         this.lastname = lastname;
@@ -31,12 +19,51 @@ public class Employee {
         ID = IDnumber;
     }
 
+    public int getId() {
+        return ID;
+    }
+
     public String getFirstName() {
-        return this.firstname ;
+        return firstname ;
     }
 
     public void setFirstname(String firstname){
         this.firstname = firstname;
+    }
+
+    public String getLastname(){
+        return lastname;
+    }
+
+    public void setLastname(String lastname){
+        this.lastname = lastname;
+    }
+
+    public int getAge(){
+        return age;
+    }
+
+    public void setAge(int age){
+        this.age = age;
+    }
+
+    public double getMonthSalary(){
+        return monthSalary;
+    }
+
+    public void setMonthSalary(double monthSalary){
+        this.monthSalary = monthSalary;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "firstname='" + firstname + '\'' +
+                ", lastname='" + lastname + '\'' +
+                ", age=" + age +
+                ", monthSalary=" + monthSalary +
+                ", ID=" + ID +
+                '}';
     }
 
 
