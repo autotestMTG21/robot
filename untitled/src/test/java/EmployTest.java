@@ -48,24 +48,24 @@ public class EmployTest {
         Assertions.assertEquals(expected,actual);
     }
 
-    /*@Test
+    @Test
     public void returnGetFirstname(){
+        String expected = "Sara";
+        String actual = testObject2.getFirstName();
 
-
-        Assertions.assertEquals("Jonas",testObject.getFirstName());
+        Assertions.assertEquals(expected,actual);
 
     }
 
     @Test
     public void returnSetFirstname(){
-        testObject = new Employee("Peter");
-        testObject.setFirstname("Peter");
-        String actual = testObject.getFirstName();
+        String expected = "Sara";
+        String actual = testObject2.getFirstName();
 
-        Assertions.assertEquals("Peter",actual );
+        Assertions.assertEquals(expected,actual );
     }
 
-    @Test
+    /*@Test
     public void adamVisar(){
         int adamAge = 30;
         testObject.compareAge(adamAge);
