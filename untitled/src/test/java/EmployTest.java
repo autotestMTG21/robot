@@ -59,9 +59,9 @@ public class EmployTest {
 
     @Test
     public void returnSetFirstname(){
-        String expected = "Sara";
-        String actual = testObject2.getFirstName();
-        testObject2.setFirstname(expected);
+        String expected = "Ella";
+        String actual = testObject1.getFirstName();
+        testObject1.setFirstname(expected);
 
         Assertions.assertEquals(expected,actual );
     }
@@ -76,8 +76,46 @@ public class EmployTest {
 
     @Test
     public void returnSetLastname(){
-        String expected = "Lundgren";
+        String expected = "Eriksson";
+        String actual = testObject3.getLastname();
+        testObject3.setLastname(expected);
 
+        Assertions.assertEquals(expected,actual);
+
+    }
+
+    @Test
+    public void returnGetAge(){
+        int expected = 45;
+        int actual = testObject3.getAge();
+
+        Assertions.assertEquals(expected,actual);
+    }
+
+    @Test
+    public void returnSetAge(){
+        int expected = 25;
+        int actual = testObject1.getAge();
+        testObject1.setAge(expected);
+
+        Assertions.assertEquals(expected,actual);
+    }
+
+    @Test
+    public void returnGetMonthSalary(){
+        double expected = 30000;
+        double actual = testObject2.getMonthSalary();
+
+        Assertions.assertEquals(expected,actual);
+    }
+
+    @Test
+    public void returnSetMonthSalary(){
+        double expected = 40000;
+        double actual = testObject3.getMonthSalary();
+        testObject3.setMonthSalary(expected);
+
+        Assertions.assertEquals(expected,actual);
     }
 
 
