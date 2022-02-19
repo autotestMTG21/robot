@@ -1,6 +1,8 @@
 import org.junit.jupiter.api.*;
 import org.springframework.test.util.ReflectionTestUtils;
 
+import java.util.ArrayList;
+
 public class EmployTest {
 
     Employee testObject1;
@@ -126,15 +128,35 @@ public class EmployTest {
 
     @Test
     public void returnAddEmployee(){
-        for (Employee employeeList : test1.addEmployee(testObject1)) {
+
+        for(Employee employeeList : test1.addEmployee(testObject1)) {
+            Assertions.assertEquals(1,employeeList.getId());
             Assertions.assertEquals("Ella Noren",employeeList.getFirstName()+" "+employeeList.getLastname());
             Assertions.assertEquals(25,employeeList.getAge());
             Assertions.assertEquals(25000,employeeList.getMonthSalary());
         }
+
+        for(Employee employeeList : test2.addEmployee(testObject2)) {
+            Assertions.assertEquals(2,employeeList.getId());
+            Assertions.assertEquals("Sara Lundgren",employeeList.getFirstName()+" "+employeeList.getLastname());
+            Assertions.assertEquals(35,employeeList.getAge());
+            Assertions.assertEquals(30000,employeeList.getMonthSalary());
+        }
+
+        for(Employee employeeList : test3.addEmployee(testObject3)) {
+            Assertions.assertEquals(3,employeeList.getId());
+            Assertions.assertEquals("Petra Eriksson",employeeList.getFirstName()+" "+employeeList.getLastname());
+            Assertions.assertEquals(45,employeeList.getAge());
+            Assertions.assertEquals(40000,employeeList.getMonthSalary());
+        }
+
+
     }
 
     @Test
-    public void returnRemoveEmployee(int ID){
+    public void returnRemoveEmployee(){
+
+
 
 
     }
