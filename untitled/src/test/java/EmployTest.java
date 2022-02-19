@@ -131,12 +131,10 @@ public class EmployTest {
             Assertions.assertEquals(25,employeeList.getAge());
             Assertions.assertEquals(25000,employeeList.getMonthSalary());
         }
-
-
     }
 
     @Test
-    public void returnRemoveEmployee(){
+    public void returnRemoveEmployee(int ID){
 
 
     }
