@@ -6,12 +6,18 @@ public class EmployTest {
     Employee testObject1;
     Employee testObject2;
     Employee testObject3;
+    EmployeeSystem test1;
+    EmployeeSystem test2;
+    EmployeeSystem test3;
 
     @BeforeEach
     public void beforeEach(){
         testObject1 = new Employee("Ella","Noren",25,25000);
         testObject2 = new Employee("Sara","Lundgren",35,30000);
         testObject3 = new Employee("Petra","Eriksson",45,40000);
+        test1 = new EmployeeSystem();
+        test2 = new EmployeeSystem();
+        test3 = new EmployeeSystem();
 
         System.out.println("This happens before each test in this class");
     }
@@ -116,6 +122,23 @@ public class EmployTest {
         testObject3.setMonthSalary(expected);
 
         Assertions.assertEquals(expected,actual);
+    }
+
+    @Test
+    public void returnAddEmployee(){
+        for (Employee employeeList : test1.addEmployee(testObject1)) {
+            Assertions.assertEquals("Ella Noren",employeeList.getFirstName()+" "+employeeList.getLastname());
+            Assertions.assertEquals(25,employeeList.getAge());
+            Assertions.assertEquals(25000,employeeList.getMonthSalary());
+        }
+
+
+    }
+
+    @Test
+    public void returnRemoveEmployee(){
+
+
     }
 
 

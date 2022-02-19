@@ -1,9 +1,19 @@
 import java.util.ArrayList;
 
 public class EmployeeSystem {
-    private ArrayList employeelist = null;
+
+    ArrayList<Employee> employeeList = new ArrayList<Employee>();
 
     public EmployeeSystem(){
-        employeelist = new ArrayList();
+
     }
+
+    public ArrayList<Employee> addEmployee(Employee employee){
+        employeeList.add(employee);
+        return employeeList;
+    }
+
+    /*public ArrayList removeEmployee(){
+
+    }*/
 }
