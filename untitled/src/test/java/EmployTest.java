@@ -153,7 +153,10 @@ public class EmployTest {
     }
 
     @Test
-    public void returnRemoveEmployee(){
+    public void returnDeleteEmployee(){
+        int number = 1;
+        test1.deleteEmployee(number);
+
 
 
 

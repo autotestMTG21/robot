@@ -13,7 +13,9 @@ public class EmployeeSystem {
         return employeeList;
     }
 
-    /*public ArrayList removeEmployee(){
+    public void deleteEmployee(int number) {
 
-    }*/
+    }
+
+
 }
