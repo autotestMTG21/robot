@@ -128,8 +128,15 @@ public class EmployTest {
 
     @Test
     public void returnAddEmployee(){
+        ArrayList<Employee> employeeList = new ArrayList<Employee>();
 
-        for(Employee employeeList : test1.addEmployee(testObject1)) {
+        employeeList = test1.addEmployee(testObject1);
+
+
+        Assertions.assertEquals(1,employeeList.size());
+
+
+        /*for(Employee employeeList : test1.addEmployee(testObject1)) {
             Assertions.assertEquals(1,employeeList.getId());
             Assertions.assertEquals("Ella Noren",employeeList.getFirstName()+" "+employeeList.getLastname());
             Assertions.assertEquals(25,employeeList.getAge());
@@ -148,20 +155,22 @@ public class EmployTest {
             Assertions.assertEquals("Petra Eriksson",employeeList.getFirstName()+" "+employeeList.getLastname());
             Assertions.assertEquals(45,employeeList.getAge());
             Assertions.assertEquals(40000,employeeList.getMonthSalary());
+        }*/
+
+
+
+    }
+
+    /*@Test
+    public void returnDeleteEmployee(){
+
+        for(Employee employeeList : test1.deleteEmployeeById(testObject1.getId())){
+            Assertions.assertEquals(2,employeeList.getId());
         }
 
-    }
-
-    @Test
-    public void returnDeleteEmployee(){
-        int number = testObject1.getId();
-        test1.deleteEmployee(number);
 
 
-
-
-
-    }
+    }*/
 
 
 }
