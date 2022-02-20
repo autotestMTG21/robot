@@ -150,7 +150,6 @@ public class EmployTest {
             Assertions.assertEquals(40000,employeeList.getMonthSalary());
         }
 
-
     }
 
     @Test
