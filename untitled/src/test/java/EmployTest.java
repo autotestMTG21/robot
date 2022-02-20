@@ -154,7 +154,7 @@ public class EmployTest {
 
     @Test
     public void returnDeleteEmployee(){
-        int number = 1;
+        int number = testObject1.getId();
         test1.deleteEmployee(number);
 
 
