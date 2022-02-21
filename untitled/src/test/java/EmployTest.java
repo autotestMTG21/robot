@@ -131,40 +131,23 @@ public class EmployTest {
         employeeList = test.addEmployee(testObject2);
         employeeList = test.addEmployee(testObject3);
 
-        Assertions.assertEquals(2,employeeList.size());
+        Assertions.assertEquals(3,employeeList.size());
 
-
-        /*for(Employee employeeList : test1.addEmployee(testObject1)) {
-            Assertions.assertEquals(1,employeeList.getId());
-            Assertions.assertEquals("Ella Noren",employeeList.getFirstName()+" "+employeeList.getLastname());
-            Assertions.assertEquals(25,employeeList.getAge());
-            Assertions.assertEquals(25000,employeeList.getMonthSalary());
-        }
-
-        for(Employee employeeList : test2.addEmployee(testObject2)) {
-            Assertions.assertEquals(2,employeeList.getId());
-            Assertions.assertEquals("Sara Lundgren",employeeList.getFirstName()+" "+employeeList.getLastname());
-            Assertions.assertEquals(35,employeeList.getAge());
-            Assertions.assertEquals(30000,employeeList.getMonthSalary());
-        }
-
-        for(Employee employeeList : test3.addEmployee(testObject3)) {
-            Assertions.assertEquals(3,employeeList.getId());
-            Assertions.assertEquals("Petra Eriksson",employeeList.getFirstName()+" "+employeeList.getLastname());
-            Assertions.assertEquals(45,employeeList.getAge());
-            Assertions.assertEquals(40000,employeeList.getMonthSalary());
-        }*/
     }
 
-    /*@Test
+    @Test
     public void returnDeleteEmployee(){
         ArrayList<Employee> employeeList = new ArrayList<Employee>();
-        int number = 1;
-        employeeList = test1.deleteEmployeeById(testObject1.getId());
 
-        Assertions.assertEquals(0,employeeList.size());
+        employeeList = test.addEmployee(testObject1);
+        employeeList = test.addEmployee(testObject2);
+        employeeList = test.addEmployee(testObject3);
 
-    }*/
+        employeeList = test.deleteEmployeeById(testObject1.getId());
+
+        Assertions.assertEquals(2,employeeList.size());
+
+    }
 
 
 }
