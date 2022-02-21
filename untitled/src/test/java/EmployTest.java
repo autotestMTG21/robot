@@ -138,16 +138,40 @@ public class EmployTest {
     @Test
     public void returnDeleteEmployee(){
         ArrayList<Employee> employeeList = new ArrayList<Employee>();
+        System.out.println(employeeList.size()); // 0
 
         employeeList = test.addEmployee(testObject1);
         employeeList = test.addEmployee(testObject2);
         employeeList = test.addEmployee(testObject3);
 
-        test.deleteEmployeeById(testObject1.getId());
+        System.out.println(employeeList.size());// 3
 
-        Assertions.assertEquals(2,employeeList.size());
+        test.deleteEmployee(testObject1.getId());
+
+
+
+
+
+
 
     }
+
+    /*@Test
+    public void returnIncreaseAllEmployeeMonthSalary(){
+        ArrayList<Employee> employeeList = new ArrayList<Employee>();
+
+        employeeList = test.addEmployee(testObject1);
+        employeeList = test.addEmployee(testObject2);
+        employeeList = test.addEmployee(testObject3);
+
+        double percentage = 0.25;
+        test.increaseAllEmployeeMonthSalary(percentage);
+
+        Assertions.assertEquals(testObject1.getMonthSalary()*(1+0.25),);
+        Assertions.assertEquals(testObject2.getMonthSalary()*(1+0.25),);
+        Assertions.assertEquals(testObject3.getMonthSalary()*(1+0.25),);
+
+    }*/
 
 
 
