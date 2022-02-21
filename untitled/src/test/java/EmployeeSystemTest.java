@@ -108,6 +108,8 @@ public class EmployeeSystemTest {
         double percentage = 0.5;
         test.increaseSpecificEmployeeSalary(testObject1, percentage);
 
+        Assertions.assertEquals(37500,testObject1.getMonthSalary());
+
     }
 
 
