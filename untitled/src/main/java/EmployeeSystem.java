@@ -13,12 +13,10 @@ public class EmployeeSystem {
         return employeeList;
     }
 
-
-
-    /*public ArrayList<Employee> deleteEmployeeById(int number) {
-        employeeList.remove(number);
+    /*public ArrayList<Employee> deleteEmployeeById(Employee employee) {
+        employeeList.remove(employee.getId());
         return employeeList;
-    }*/
 
+    }*/
 
 }

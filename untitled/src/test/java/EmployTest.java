@@ -8,18 +8,15 @@ public class EmployTest {
     Employee testObject1;
     Employee testObject2;
     Employee testObject3;
-    EmployeeSystem test1;
-    EmployeeSystem test2;
-    EmployeeSystem test3;
+    EmployeeSystem test;
 
     @BeforeEach
     public void beforeEach(){
         testObject1 = new Employee("Ella","Noren",25,25000);
         testObject2 = new Employee("Sara","Lundgren",35,30000);
         testObject3 = new Employee("Petra","Eriksson",45,40000);
-        test1 = new EmployeeSystem();
-        test2 = new EmployeeSystem();
-        test3 = new EmployeeSystem();
+        test = new EmployeeSystem();
+
 
         System.out.println("This happens before each test in this class");
     }
@@ -130,10 +127,11 @@ public class EmployTest {
     public void returnAddEmployee(){
         ArrayList<Employee> employeeList = new ArrayList<Employee>();
 
-        employeeList = test1.addEmployee(testObject1);
+        employeeList = test.addEmployee(testObject1);
+        employeeList = test.addEmployee(testObject2);
+        employeeList = test.addEmployee(testObject3);
 
-
-        Assertions.assertEquals(1,employeeList.size());
+        Assertions.assertEquals(2,employeeList.size());
 
 
         /*for(Employee employeeList : test1.addEmployee(testObject1)) {
@@ -156,19 +154,15 @@ public class EmployTest {
             Assertions.assertEquals(45,employeeList.getAge());
             Assertions.assertEquals(40000,employeeList.getMonthSalary());
         }*/
-
-
-
     }
 
     /*@Test
     public void returnDeleteEmployee(){
+        ArrayList<Employee> employeeList = new ArrayList<Employee>();
+        int number = 1;
+        employeeList = test1.deleteEmployeeById(testObject1.getId());
 
-        for(Employee employeeList : test1.deleteEmployeeById(testObject1.getId())){
-            Assertions.assertEquals(2,employeeList.getId());
-        }
-
-
+        Assertions.assertEquals(0,employeeList.size());
 
     }*/
 
