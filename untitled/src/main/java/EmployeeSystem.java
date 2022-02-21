@@ -22,14 +22,16 @@ public class EmployeeSystem {
         employeeList.remove(employee);
     }
 
-
     public void increaseAllEmployeeMonthSalary(double percentage) {
         if(percentage >0 && percentage <=1){
-
             for(int i =0; i<employeeList.size();i++){
                 double newSalary =employeeList.get(i).getMonthSalary()*(1+percentage);
                 employeeList.get(i).setMonthSalary(newSalary);
             }
         }
+    }
+
+    public void increaseSpecificEmployeeSalary(double percentage) {
+
     }
 }
