@@ -24,14 +24,17 @@ public class EmployeeSystem {
 
     public void increaseAllEmployeeMonthSalary(double percentage) {
         if(percentage >0 && percentage <=1){
-            for(int i =0; i<employeeList.size();i++){
+            for(int i =0; i<employeeList.size(); i++){
                 double newSalary =employeeList.get(i).getMonthSalary()*(1+percentage);
                 employeeList.get(i).setMonthSalary(newSalary);
             }
         }
     }
 
-    public void increaseSpecificEmployeeSalary(double percentage) {
+    public void increaseSpecificEmployeeSalary(Employee employee, double percentage) {
+        if(percentage>0 && percentage<=1){
+
+        }
 
     }
 }

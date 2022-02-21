@@ -106,7 +106,8 @@ public class EmployeeSystemTest {
         employeeList = test.addEmployee(testObject3);
 
         double percentage = 0.5;
-        test.increaseSpecificEmployeeSalary(percentage);
+        test.increaseSpecificEmployeeSalary(testObject1, percentage);
+
     }
 
 
