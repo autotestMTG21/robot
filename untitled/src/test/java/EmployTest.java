@@ -47,8 +47,8 @@ public class EmployTest {
 
     @Test
     public void returnGetId(){
-        int expected = 1;
-        int actual = testObject1.getId();
+        int expected = testObject2.getId();
+        int actual = testObject1.getId() +1 ;
 
         Assertions.assertEquals(expected,actual);
     }
@@ -65,8 +65,9 @@ public class EmployTest {
     @Test
     public void returnSetFirstname(){
         String expected = "Ella";
-        String actual = testObject1.getFirstName();
         testObject1.setFirstname(expected);
+        String actual = testObject1.getFirstName();
+
 
         Assertions.assertEquals(expected,actual );
     }

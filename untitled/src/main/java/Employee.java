@@ -6,9 +6,6 @@ public class Employee {
     private int ID;
     static int IDnumber;
 
-    public Employee(){
-
-    }
 
     public Employee(String firstname, String lastname, int age, double monthSalary){
         this.firstname = firstname;

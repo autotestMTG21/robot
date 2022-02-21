@@ -49,6 +49,7 @@ public class EmployeeSystemTest {
 
 
         Assertions.assertEquals(3,employeeList.size());
+        Assertions.assertEquals("Sara",employeeList.get(1).getFirstName());
 
     }
 
@@ -69,7 +70,7 @@ public class EmployeeSystemTest {
 
         System.out.println(testObject1.getId());// 1
 
-        test.deleteEmployee(testObject1.getId());
+        test.deleteEmployee(testObject1);
 
         System.out.println(employeeList.size()); // 2
 
@@ -91,11 +92,11 @@ public class EmployeeSystemTest {
         double percentage = 0.25;
         test.increaseAllEmployeeMonthSalary(percentage);
 
-        Assertions.assertEquals(testObject1.getMonthSalary()*(1+0.25),);
-        Assertions.assertEquals(testObject2.getMonthSalary()*(1+0.25),);
-        Assertions.assertEquals(testObject3.getMonthSalary()*(1+0.25),);
+        Assertions.assertEquals(31250,testObject1.getMonthSalary());
+        Assertions.assertEquals(37500,testObject2.getMonthSalary());
+        Assertions.assertEquals(50000,testObject3.getMonthSalary());
 
-    }*/
+    }
 
 
 }
