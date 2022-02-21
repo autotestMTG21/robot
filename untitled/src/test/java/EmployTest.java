@@ -143,7 +143,7 @@ public class EmployTest {
         employeeList = test.addEmployee(testObject2);
         employeeList = test.addEmployee(testObject3);
 
-        employeeList = test.deleteEmployeeById(testObject1.getId());
+        test.deleteEmployeeById(testObject1.getId());
 
         Assertions.assertEquals(2,employeeList.size());
 
