@@ -74,9 +74,9 @@ public class EmployeeSystemTest {
 
         System.out.println(employeeList.size()); // 2
 
-        for(int i = 0; i<employeeList.size();i++){
+        /*for(int i = 0; i<employeeList.size();i++){
             System.out.println(employeeList.get(i).getId()+employeeList.get(i).getFirstName()+employeeList.get(i).getLastname()+employeeList.get(i).getAge()+employeeList.get(i).getMonthSalary());
-        }
+        }*/
         Assertions.assertEquals(2,employeeList.size());
         Assertions.assertEquals("Sara", employeeList.get(0).getFirstName());
 
