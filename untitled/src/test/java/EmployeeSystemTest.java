@@ -95,7 +95,18 @@ public class EmployeeSystemTest {
         Assertions.assertEquals(31250,testObject1.getMonthSalary());
         Assertions.assertEquals(37500,testObject2.getMonthSalary());
         Assertions.assertEquals(50000,testObject3.getMonthSalary());
+    }
 
+    @Test
+    public void returnIncreaseSpecificEmployeeSalary(){
+        ArrayList<Employee> employeeList = new ArrayList<Employee>();
+
+        employeeList = test.addEmployee(testObject1);
+        employeeList = test.addEmployee(testObject2);
+        employeeList = test.addEmployee(testObject3);
+
+        double percentage = 0.5;
+        test.increaseSpecificEmployeeSalary(percentage);
     }
 
 
