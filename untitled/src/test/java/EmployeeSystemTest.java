@@ -62,17 +62,17 @@ public class EmployeeSystemTest {
         employeeList = test.addEmployee(testObject2);
         employeeList = test.addEmployee(testObject3);
 
-        System.out.println(employeeList.size());// 3
+        //System.out.println(employeeList.size());// 3
 
         /*for(int i = 0; i<employeeList.size();i++){
             System.out.println(employeeList.get(i).getId()+employeeList.get(i).getFirstName()+employeeList.get(i).getLastname()+employeeList.get(i).getAge()+employeeList.get(i).getMonthSalary());
         }*/
 
-        System.out.println(testObject1.getId());// 1
+        //System.out.println(testObject1.getId());// 1
 
         test.deleteEmployee(testObject1);
 
-        System.out.println(employeeList.size()); // 2
+        //System.out.println(employeeList.size()); // 2
 
         /*for(int i = 0; i<employeeList.size();i++){
             System.out.println(employeeList.get(i).getId()+employeeList.get(i).getFirstName()+employeeList.get(i).getLastname()+employeeList.get(i).getAge()+employeeList.get(i).getMonthSalary());
