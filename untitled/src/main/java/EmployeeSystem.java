@@ -19,19 +19,17 @@ public class EmployeeSystem {
 
     }*/
     public void deleteEmployee(Employee employee) {
-
         employeeList.remove(employee);
     }
+
 
     public void increaseAllEmployeeMonthSalary(double percentage) {
         if(percentage >0 && percentage <=1){
 
-           for(int i =0; i<employeeList.size();i++){
-               double newSalary =employeeList.get(i).getMonthSalary()*(1+percentage);
-               employeeList.get(i).setMonthSalary(newSalary);
-           }
-
+            for(int i =0; i<employeeList.size();i++){
+                double newSalary =employeeList.get(i).getMonthSalary()*(1+percentage);
+                employeeList.get(i).setMonthSalary(newSalary);
+            }
         }
-
     }
 }
