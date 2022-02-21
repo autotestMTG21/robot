@@ -33,7 +33,8 @@ public class EmployeeSystem {
 
     public void increaseSpecificEmployeeSalary(Employee employee, double percentage) {
         if(percentage>0 && percentage<=1){
-
+            double newSalary = employee.getMonthSalary()*(1+percentage);
+            employee.setMonthSalary(newSalary);
         }
 
     }
