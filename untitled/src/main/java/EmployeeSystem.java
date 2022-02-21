@@ -14,15 +14,12 @@ public class EmployeeSystem {
     }
 
     public void deleteEmployee(int id) {
-        employeeList.remove(id);
+        int index = id -1;
+        employeeList.remove(index);
+
     }
 
-    /*public ArrayList<Employee> deleteEmployeeById(int id) {
-        employeeList.remove(id);
-        return employeeList;
-    }*/
+    public void increaseAllEmployeeMonthSalary(double percentage) {
 
-    /*public void increaseAllEmployeeMonthSalary(double percentage) {
-
-    }*/
+    }
 }

@@ -8,14 +8,14 @@ public class EmployTest {
     Employee testObject1;
     Employee testObject2;
     Employee testObject3;
-    EmployeeSystem test;
+    //EmployeeSystem test;
 
     @BeforeEach
     public void beforeEach(){
         testObject1 = new Employee("Ella","Noren",25,25000);
         testObject2 = new Employee("Sara","Lundgren",35,30000);
         testObject3 = new Employee("Petra","Eriksson",45,40000);
-        test = new EmployeeSystem();
+        //test = new EmployeeSystem();
 
 
         System.out.println("This happens before each test in this class");
@@ -123,7 +123,7 @@ public class EmployTest {
         Assertions.assertEquals(expected,actual);
     }
 
-    @Test
+    /*@Test
     public void returnAddEmployee(){
         ArrayList<Employee> employeeList = new ArrayList<Employee>();
 
@@ -151,13 +151,7 @@ public class EmployTest {
         System.out.println(employeeList.size()); // 2
         Assertions.assertEquals(2,employeeList.size());
 
-
-
-
-
-
-
-    }
+    }*/
 
     /*@Test
     public void returnIncreaseAllEmployeeMonthSalary(){
@@ -175,9 +169,5 @@ public class EmployTest {
         Assertions.assertEquals(testObject3.getMonthSalary()*(1+0.25),);
 
     }*/
-
-
-
-
 
 }
