@@ -148,6 +148,9 @@ public class EmployTest {
 
         test.deleteEmployee(testObject1.getId());
 
+        System.out.println(employeeList.size()); // 2
+        Assertions.assertEquals(2,employeeList.size());
+
 
 
 
